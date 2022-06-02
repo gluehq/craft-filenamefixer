@@ -1,0 +1,52 @@
+{
+    "name": "gluehq/craft-filenamefixer",
+    "description": "Replaces underscores with hyphens in the filenames of new uploads, believed to improve SEO",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "plugin",
+        "craft-plugin",
+        "assets",
+        "upload",
+        "filename",
+        "rename",
+        "replace underscores"
+    ],
+    "support": {
+        "docs": "https://github.com/gluehq/craft-filenamefixer/blob/master/README.md",
+        "issues": "https://github.com/gluehq/craft-filenamefixer/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Glue",
+            "homepage": "https://www.glue.co.nz"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0"
+    },
+    "require-dev": {
+      "craftcms/cms": "^3.2.0",
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "gluehq\\filenamefixer\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Filename Fixer",
+        "handle": "filenamefixer",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "components": {
+            "filename": "gluehq\\filenamefixer\\services\\Filename"
+        },
+        "class": "gluehq\\filenamefixer\\FilenameFixer"
+    }
+}
